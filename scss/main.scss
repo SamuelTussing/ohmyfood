@@ -1,7 +1,72 @@
-body{
+//varibles//
+$first-color:#9356DC;
+$second-color:#FF79DA;
+$third-color:#99e2d0;
+$light-background:#f3f3f3;
+$med-background:#eaeaea;
+$dark-background:#353535;
+
+
+body, h1, h2{
     font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3{
-    font-family: 'Shrikhand', cursive;
+
+h1{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+@media screen and (min-width: 320px){
+
+body{
+    margin: 0px;
+}
+
+header{
+margin-top: 5px;
+height: 63px;
+display: flex;
+justify-content: center;
+}
+    .header--img{
+    width: 162px;
+    }
+
+    //style for the explore section containing h1 txt and cta//
+.explore{
+    height: 350px;
+    color : $dark-background;
+    background-color: $light-background;
+        &--location{
+            background-color: $med-background;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap:15px;
+        }
+        &--infos{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+            align-items: center;
+        }
+        &--infos--cta{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 25px;
+            height: 50px;
+            width: 218px;
+            background: linear-gradient(-180deg, $first-color -11.44%, $second-color 123.93%);
+            font-size: 16px;
+            color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+            margin-top: 15px;
+            
+        }
+}
 }
