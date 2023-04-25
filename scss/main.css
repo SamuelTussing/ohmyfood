@@ -45,6 +45,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     border-radius: 25px;
     height: 50px;
     width: 218px;
@@ -53,6 +54,10 @@ h1 {
     color: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     margin-top: 15px;
+  }
+  .explore--infos--cta a {
+    text-decoration: none;
+    color: white;
   }
   .function {
     height: 440px;
@@ -109,9 +114,12 @@ h1 {
   .restos {
     display: flex;
     flex-direction: column;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 20px;
     background-color: #f3f3f3;
+  }
+  .restos--choices a {
+    text-decoration: none;
+    color: black;
   }
   .restos--choices--card {
     display: flex;
@@ -149,39 +157,39 @@ h1 {
     background-color: #f6f6f6;
     border-radius: 0px 0px 15px 15px;
   }
-  .restos--choices--card--ctn--txt {
+  .restos--choices--card--txt {
     display: flex;
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
     padding-top: 5px;
   }
-  .restos--choices--card--ctn--txt h3, .restos--choices--card--ctn--txt p {
+  .restos--choices--card--txt h3, .restos--choices--card--txt p {
     margin: 2px;
   }
-  footer {
-    background-color: #353535;
-    color: white;
-    padding: 15px;
-  }
-  footer ul {
-    list-style-type: none;
-    -webkit-padding-start: 0;
-            padding-inline-start: 0;
-  }
-  footer li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    line-height: 30px;
-  }
-  footer a {
-    text-decoration: none;
-    color: white;
-  }
-  footer img {
-    filter: invert(100%);
-    height: 27px;
-  }
+}
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 25px;
+}
+footer ul {
+  list-style-type: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+footer li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  line-height: 30px;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer img {
+  filter: invert(100%);
+  height: 27px;
 }/*# sourceMappingURL=main.css.map */
