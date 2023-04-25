@@ -1,0 +1,31 @@
+//varibles//
+$first-color:#9356DC;
+$second-color:#FF79DA;
+$third-color:#99e2d0;
+$light-background:#f3f3f3;
+$med-background:#eaeaea;
+$dark-background:#353535;
+$btn-background: #f6f6f6;
+
+@media screen and (min-width: 320px){
+
+    body{
+        margin: 0px;
+    }
+    
+    header{
+    margin-top: 5px;
+    height: 63px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+        & a{
+            position: absolute;
+            left: 45px;
+        }
+    }
+        .header--img{
+        width: 162px;
+        }
+    }
