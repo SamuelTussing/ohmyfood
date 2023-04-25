@@ -113,20 +113,17 @@ h1 {
     padding-right: 15px;
     background-color: #f3f3f3;
   }
-  .restos--choices {
-    display: flex;
-    flex-direction: column;
-  }
   .restos--choices--card {
     display: flex;
     flex-direction: column;
-    height: 231px;
-    border-radius: 15px;
+    margin-top: 33px;
+    height: 400px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   }
   .restos--choices--card--img {
     display: flex;
     flex-direction: row;
+    height: 70%;
   }
   .restos--choices--card--img img {
     width: 100%;
