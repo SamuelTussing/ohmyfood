@@ -159,4 +159,29 @@ h1 {
   .restos--choices--card--ctn--txt h3, .restos--choices--card--ctn--txt p {
     margin: 2px;
   }
+  footer {
+    background-color: #353535;
+    color: white;
+    padding: 15px;
+  }
+  footer ul {
+    list-style-type: none;
+    -webkit-padding-start: 0;
+            padding-inline-start: 0;
+  }
+  footer li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    line-height: 30px;
+  }
+  footer a {
+    text-decoration: none;
+    color: white;
+  }
+  footer img {
+    filter: invert(100%);
+    height: 27px;
+  }
 }/*# sourceMappingURL=main.css.map */
