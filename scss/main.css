@@ -1,5 +1,3 @@
-/*# sourceMappingURL=main.css.map */
-
 body, h1, h2 {
   font-family: "Roboto", sans-serif;
 }
@@ -107,5 +105,61 @@ h1 {
     font-family: "Roboto";
     font-weight: 500;
     font-size: 16px;
+  }
+  .restos {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #f3f3f3;
+  }
+  .restos--choices {
+    display: flex;
+    flex-direction: column;
+  }
+  .restos--choices--card {
+    display: flex;
+    flex-direction: column;
+    height: 231px;
+    border-radius: 15px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  }
+  .restos--choices--card--img {
+    display: flex;
+    flex-direction: row;
+  }
+  .restos--choices--card--img img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+  }
+  .restos--choices--card--comm {
+    position: relative;
+    top: 16px;
+    right: 88px;
+    background-color: #99e2d0;
+    color: #1b6150;
+    height: 20px;
+    padding: 5px;
+  }
+  .restos--choices--card--ctn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f6f6f6;
+    border-radius: 0px 0px 15px 15px;
+  }
+  .restos--choices--card--ctn--txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-top: 5px;
+  }
+  .restos--choices--card--ctn--txt h3, .restos--choices--card--ctn--txt p {
+    margin: 2px;
   }
 }/*# sourceMappingURL=main.css.map */
