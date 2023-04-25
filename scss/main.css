@@ -1,5 +1,3 @@
-/*# sourceMappingURL=main.css.map */
-
 body, h1, h2 {
   font-family: "Roboto", sans-serif;
 }
@@ -47,6 +45,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     border-radius: 25px;
     height: 50px;
     width: 218px;
@@ -55,6 +54,10 @@ h1 {
     color: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     margin-top: 15px;
+  }
+  .explore--infos--cta a {
+    text-decoration: none;
+    color: white;
   }
   .function {
     height: 440px;
@@ -108,4 +111,85 @@ h1 {
     font-weight: 500;
     font-size: 16px;
   }
+  .restos {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f3f3f3;
+  }
+  .restos--choices a {
+    text-decoration: none;
+    color: black;
+  }
+  .restos--choices--card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 33px;
+    height: 400px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  }
+  .restos--choices--card--img {
+    display: flex;
+    flex-direction: row;
+    height: 70%;
+  }
+  .restos--choices--card--img img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+  }
+  .restos--choices--card--comm {
+    position: relative;
+    top: 16px;
+    right: 88px;
+    background-color: #99e2d0;
+    color: #1b6150;
+    height: 20px;
+    padding: 5px;
+  }
+  .restos--choices--card--ctn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f6f6f6;
+    border-radius: 0px 0px 15px 15px;
+  }
+  .restos--choices--card--txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-top: 5px;
+  }
+  .restos--choices--card--txt h3, .restos--choices--card--txt p {
+    margin: 2px;
+  }
+}
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 25px;
+}
+footer ul {
+  list-style-type: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+footer li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  line-height: 30px;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer img {
+  filter: invert(100%);
+  height: 27px;
 }/*# sourceMappingURL=main.css.map */

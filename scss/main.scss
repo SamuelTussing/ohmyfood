@@ -68,6 +68,7 @@ justify-content: center;
             display: flex;
             align-items: center;
             justify-content: center;
+            cursor:pointer;
             border-radius: 25px;
             height: 50px;
             width: 218px;
@@ -76,7 +77,10 @@ justify-content: center;
             color: white;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
             margin-top: 15px;
-            
+                & a{
+                    text-decoration: none;
+                    color: white;
+                }
         }
 }
 
@@ -128,4 +132,88 @@ justify-content: center;
                 }
         }
 }
+
+.restos{
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+    background-color: $light-background;
+        &--choices{
+            & a{
+                text-decoration: none;
+                color: black;
+            }
+
+            &--card{
+                display: flex;
+                flex-direction: column; 
+                margin-top: 33px;
+                height: 400px;
+                filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+                &--img{
+                    display: flex;
+                    flex-direction: row;
+                    height: 70%;
+                    & img{
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 15px 15px 0px 0px;
+                    }
+                }
+                &--comm{
+                    position: relative;
+                    top: 16px;
+                    right: 88px;
+                    background-color: $third-color;
+                    color: darken($color: $third-color, $amount: 50%);
+                    height: 20px;
+                    padding: 5px;
+                }
+                &--ctn{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 15px;
+                    background-color: $btn-background;
+                    border-radius: 0px 0px 15px 15px;
+                    }
+                    &--txt{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        box-sizing: border-box;
+                        padding-top: 5px;
+                        & h3, p{
+                            margin: 2px;
+                        }
+                    }
+                }
+            }
+    }
+}
+
+footer{
+    background-color: $dark-background;
+    color: white;
+    padding : 25px;
+        & ul{
+            list-style-type: none;
+            padding-inline-start: 0;
+        }
+        & li{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            line-height: 30px;
+        }
+        & a{
+            text-decoration: none;
+            color: white;
+        }
+        & img{
+            filter: invert(100%);
+            height: 27px;
+        }
 }
