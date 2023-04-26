@@ -1,0 +1,154 @@
+//variAbles//
+$first-color:#9356DC;
+$second-color:#FF79DA;
+$third-color:#99e2d0;
+$light-background:#f3f3f3;
+$med-background:#eaeaea;
+$dark-background:#353535;
+$btn-background: #f6f6f6;
+
+////MIXINS////
+
+//This mixin define the card for the starter,plate and dessert suggestion//
+@mixin menucard {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    padding: 0px 15px 0px 15px;
+    margin-top: 20px;
+        &--name{
+            line-height: 15px;
+        }
+        &--price{
+            font-weight: 700;
+            font-size: 15px;
+        }
+}
+
+//Define the style for the cta "commander"//
+@mixin ctafunction{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 25px;
+    height: 50px;
+    width: 218px;
+    background: linear-gradient(-180deg, #9356DC -11.44%, #FF79DA 123.93%);
+    font-size: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    margin: 50px 0px 40px 0px;
+}
+
+
+
+h1{
+    font-family: 'Shrikhand', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+h2{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    border-bottom: 3px solid $third-color ;
+    width: 40px;
+    line-height: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+//Media querry for mobile first version. Allows screens width from 320px to 720px//
+@media screen and (min-width: 320px){
+
+    body{
+        margin: 0px;
+    }
+    
+    header{
+    margin-top: 5px;
+    height: 63px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+        & a{
+            position: absolute;
+            left: 45px;
+            color: $dark-background;
+        }
+    }
+        .header--img{
+        width: 162px;
+        }   
+    .top--image{
+        & img{
+            width: 100%;
+        }
+    }
+
+    .menu{
+        background-color: #f7f7f7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        border-radius: 70px 68px 0px 0px;
+        margin-top: -70px;
+        z-index: 1;
+        position: relative;
+            &--title{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 90%;
+            }
+            &--plate{
+                display: flex;
+                flex-direction: column;
+                padding-top: 25px;
+                width: 100%;
+                    &--card{
+                        @include menucard;
+                    }
+                    &--cta{
+                        @include ctafunction
+                    }
+            }
+    }
+
+
+    footer{
+        background-color: $dark-background;
+        color: white;
+        padding : 25px;
+            & ul{
+                list-style-type: none;
+                padding-inline-start: 0;
+            }
+            & li{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+                line-height: 30px;
+            }
+            & img{
+                filter: invert(100%);
+                height: 27px;
+            }
+    }
+}
