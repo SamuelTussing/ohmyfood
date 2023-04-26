@@ -17,6 +17,11 @@ h2 {
   line-height: 30px;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 @media screen and (min-width: 320px) {
   body {
     margin: 0px;
@@ -32,6 +37,7 @@ h2 {
   header a {
     position: absolute;
     left: 45px;
+    color: #353535;
   }
   .header--img {
     width: 162px;
@@ -43,7 +49,8 @@ h2 {
     background-color: #f7f7f7;
     display: flex;
     flex-direction: column;
-    padding: 25px;
+    align-items: center;
+    padding: 20px;
     border-radius: 70px 68px 0px 0px;
     margin-top: -70px;
     z-index: 1;
@@ -54,13 +61,15 @@ h2 {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-right: 50px;
+    width: 90%;
   }
-  .menu--entree {
+  .menu--plate {
     display: flex;
     flex-direction: column;
+    padding-top: 25px;
+    width: 100%;
   }
-  .menu--entree--card {
+  .menu--plate--card {
     background-color: white;
     display: flex;
     flex-direction: row;
@@ -69,13 +78,27 @@ h2 {
     border-radius: 15px;
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
     padding: 0px 15px 0px 15px;
+    margin-top: 20px;
   }
-  .menu--entree--card--name {
+  .menu--plate--card--name {
     line-height: 15px;
   }
-  .menu--entree--card--price {
+  .menu--plate--card--price {
     font-weight: 700;
     font-size: 15px;
+  }
+  .menu--plate--cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 25px;
+    height: 50px;
+    width: 218px;
+    background: linear-gradient(-180deg, #9356DC -11.44%, #FF79DA 123.93%);
+    font-size: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    margin: 50px 0px 40px 0px;
   }
   footer {
     background-color: #353535;
@@ -93,10 +116,6 @@ h2 {
     align-items: center;
     gap: 10px;
     line-height: 30px;
-  }
-  footer a {
-    text-decoration: none;
-    color: white;
   }
   footer img {
     filter: invert(100%);
