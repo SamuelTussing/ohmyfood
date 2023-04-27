@@ -46,7 +46,6 @@ justify-content: center;
 
     //style for the explore section containing h1 txt and cta//
 .explore{
-    height: 350px;
     color : $dark-background;
     background-color: $light-background;
         &--location{
@@ -61,7 +60,7 @@ justify-content: center;
             display: flex;
             flex-direction: column;
             text-align: center;
-            padding: 20px;
+            padding: 40px;
             align-items: center;
         }
         &--infos--cta{
@@ -218,4 +217,9 @@ footer{
         }
 }
 
-//breakpoint 768px puis 1024px//
+//Media querry for tablet first version. Allows screens width from 767px to 1024px//
+@media screen and (min-width: 767px){
+    //same version for mobile and tablet//
+}
+
+//breakpoint  1024px//
