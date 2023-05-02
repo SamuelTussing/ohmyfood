@@ -195,6 +195,9 @@ footer img {
 }
 
 @media screen and (min-width: 1024px) {
+  body {
+    margin: auto;
+  }
   .function--desc {
     flex-direction: row;
   }
