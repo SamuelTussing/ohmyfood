@@ -19,6 +19,7 @@ $btn-background: #f6f6f6;
 
 body, h1, h2{
     font-family: 'Roboto', sans-serif;
+    max-width: 1440px;
 }
 
 
@@ -84,15 +85,15 @@ justify-content: center;
 }
 
 .function{
-    height: 440px;
     display: flex;
     flex-direction: column;
     padding-left: 15px;
     padding-right: 15px;
+    margin-bottom: 75px;
         &--desc{
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
             gap: 20px;
         }
@@ -135,7 +136,7 @@ justify-content: center;
 .restos{
     display: flex;
     flex-direction: column;
-    padding:20px;
+    padding: 50px 20px 50px 20px;
     background-color: $light-background;
         &--choices{
             & a{
@@ -217,9 +218,45 @@ footer{
         }
 }
 
-//Media querry for tablet first version. Allows screens width from 767px to 1024px//
+//Media querry for tablet version. Allows screens width from 767px to 1024px//
 @media screen and (min-width: 767px){
     //same version for mobile and tablet//
 }
 
+//Media querry for desktop version. Allows screens width from 1024px to 1440px//
+@media screen and (min-width: 1024px){
+
+    body{
+        margin: auto;
+    }
+
+    .function--desc{
+        flex-direction: row;
+        &--cta{
+            max-width: 30%;
+        }
+    }
+
+    .restos--choices{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+            & a{
+                width: 45%;
+            }
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 20px;
+            & ul{
+                display: flex;
+                gap: 20px;
+            }
+    }
+}
 //breakpoint  1024px//
