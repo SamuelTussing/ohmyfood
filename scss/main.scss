@@ -1,11 +1,14 @@
 //varibles//
 $first-color:#9356DC;
+$first-color-light: #a872e3;
 $second-color:#FF79DA;
+$second-color-light: #ff92e0;
 $third-color:#99e2d0;
 $light-background:#f3f3f3;
 $med-background:#eaeaea;
 $dark-background:#353535;
 $btn-background: #f6f6f6;
+
 
 
 //mixins//
@@ -64,6 +67,7 @@ justify-content: center;
             padding: 40px;
             align-items: center;
         }
+        //cta with hover animation//
         &--infos--cta{
             display: flex;
             align-items: center;
@@ -77,6 +81,11 @@ justify-content: center;
             color: white;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
             margin-top: 15px;
+            transition: transform 450ms, background 300ms 150ms;
+                &:hover{
+                    background: linear-gradient(-180deg, $first-color-light -11.44%, $second-color-light 123.93%);
+                    transform: scale(1.02);
+                }
                 & a{
                     text-decoration: none;
                     color: white;
@@ -211,6 +220,10 @@ footer{
         & a{
             text-decoration: none;
             color: white;
+            transition: color 300ms 150ms;
+                &:hover{
+                    color: $first-color-light;
+                }
         }
         & img{
             filter: invert(100%);

@@ -1,6 +1,8 @@
 //variAbles//
 $first-color:#9356DC;
+$first-color-light: #a872e3;
 $second-color:#FF79DA;
+$second-color-light: #ff92e0;
 $third-color:#99e2d0;
 $light-background:#f3f3f3;
 $med-background:#eaeaea;
@@ -35,14 +37,20 @@ $btn-background: #f6f6f6;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    cursor:pointer;
     border-radius: 25px;
     height: 50px;
     width: 218px;
-    background: linear-gradient(-180deg, #9356DC -11.44%, #FF79DA 123.93%);
+    background: linear-gradient(-180deg, $first-color -11.44%, $second-color 123.93%);
     font-size: 16px;
+    color: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    margin: 50px 0px 40px 0px;
+    margin-top: 15px;
+    transition: transform 450ms, background 300ms 150ms;
+        &:hover{
+            background: linear-gradient(-180deg, $first-color-light -11.44%, $second-color-light 123.93%);
+            transform: scale(1.02);
+        }
 }
 
 
@@ -68,7 +76,6 @@ h2{
 
 a{
     text-decoration: none;
-    color: white;
 }
 
 h3, p{
@@ -122,6 +129,9 @@ h3, p{
         margin-top: -70px;
         z-index: 1;
         position: relative;
+            & a{
+                color: black;
+            }
             &--title{
                 display: flex;
                 flex-direction: row;
@@ -138,7 +148,10 @@ h3, p{
                         @include menucard;
                     }
                     &--cta{
-                        @include ctafunction
+                        @include ctafunction;
+                        & a{
+                            color: white;
+                        }
                     }
             }
     }
@@ -162,6 +175,14 @@ h3, p{
             & img{
                 filter: invert(100%);
                 height: 27px;
+            }
+            & a{
+                text-decoration: none;
+                color: white;
+                transition: color 300ms 150ms;
+                    &:hover{
+                        color: $first-color-light;
+                    }
             }
     }
 }
@@ -241,6 +262,14 @@ h3, p{
             & ul{
                 display: flex;
                 gap: 20px;
+            }
+            & a{
+                text-decoration: none;
+                color: white;
+                transition: color 300ms 150ms;
+                    &:hover{
+                        color: $first-color-light;
+                    }
             }
     }
 }

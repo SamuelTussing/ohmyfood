@@ -19,7 +19,6 @@ h2 {
 
 a {
   text-decoration: none;
-  color: white;
 }
 
 h3, p {
@@ -71,6 +70,9 @@ h3, p {
     z-index: 1;
     position: relative;
   }
+  .menu a {
+    color: black;
+  }
   .menu--title {
     display: flex;
     flex-direction: row;
@@ -113,8 +115,17 @@ h3, p {
     width: 218px;
     background: linear-gradient(-180deg, #9356DC -11.44%, #FF79DA 123.93%);
     font-size: 16px;
+    color: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    margin: 50px 0px 40px 0px;
+    margin-top: 15px;
+    transition: transform 450ms, background 300ms 150ms;
+  }
+  .menu--plate--cta:hover {
+    background: linear-gradient(-180deg, #a872e3 -11.44%, #ff92e0 123.93%);
+    transform: scale(1.02);
+  }
+  .menu--plate--cta a {
+    color: white;
   }
   footer {
     background-color: #353535;
@@ -136,6 +147,14 @@ h3, p {
   footer img {
     filter: invert(100%);
     height: 27px;
+  }
+  footer a {
+    text-decoration: none;
+    color: white;
+    transition: color 300ms 150ms;
+  }
+  footer a:hover {
+    color: #a872e3;
   }
 }
 @media screen and (min-width: 767px) {
@@ -205,5 +224,13 @@ h3, p {
   footer ul {
     display: flex;
     gap: 20px;
+  }
+  footer a {
+    text-decoration: none;
+    color: white;
+    transition: color 300ms 150ms;
+  }
+  footer a:hover {
+    color: #a872e3;
   }
 }/*# sourceMappingURL=menu-palette-du-gout.css.map */
