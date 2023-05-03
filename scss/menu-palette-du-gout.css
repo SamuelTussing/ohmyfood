@@ -59,6 +59,15 @@ h3, p {
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .link:focus .menu--plate--card--anim {
+    transform: scaleX(2);
+  }
+  .link:focus .menu--plate--card--anim i {
+    transform: scaleY(2);
+  }
+  .link:focus .menu--plate--card--name {
+    width: 45%;
+  }
   .menu {
     background-color: #f7f7f7;
     display: flex;
@@ -97,7 +106,7 @@ h3, p {
     justify-content: space-between;
     border-radius: 15px;
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-    padding: 0px 15px 0px 15px;
+    padding: 0px 0px 0px 15px;
     margin-top: 20px;
   }
   .menu--plate--card--name {
@@ -107,6 +116,29 @@ h3, p {
   .menu--plate--card--price {
     font-weight: 700;
     font-size: 15px;
+  }
+  .menu--plate--card--anim {
+    display: flex;
+    align-items: center;
+    background-color: #99e2d0;
+    padding: 10px;
+    height: 80px;
+    border-radius: 0px 5px 5px 0px;
+    transition-duration: 325ms;
+    transition-timing-function: ease-in-out;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+  }
+  .menu--plate--card--anim i {
+    transition-duration: 400ms;
+    transition-timing-function: ease-in;
+    transform: scaleY(0);
+  }
+  .menu--plate--card--name {
+    width: 80%;
+    transform-origin: 0% 50%;
+    transition-duration: 350ms;
+    transition-timing-function: ease-in-out;
   }
   .menu--plate--cta {
     display: flex;
@@ -173,7 +205,6 @@ h3, p {
   }
   .menu--plate--card {
     width: 90%;
-    justify-content: space-around;
   }
   .menu--plate--card--name {
     width: 80%;

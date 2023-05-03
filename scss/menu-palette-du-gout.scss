@@ -20,7 +20,7 @@ $btn-background: #f6f6f6;
     justify-content: space-between;
     border-radius: 15px;
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-    padding: 0px 15px 0px 15px;
+    padding: 0px 0px 0px 15px;
     margin-top: 20px;
         &--name{
             line-height: 15px;
@@ -120,6 +120,18 @@ h3, p{
         }
     }
 
+    //animations for selecting the plates : scale the green div in X and the img in Y//
+    .link:focus{
+        & .menu--plate--card--anim{
+            transform: scaleX(2);
+                & i{
+                    transform: scaleY(2);
+                }
+        }
+        & .menu--plate--card--name{
+            width: 45%;
+        }
+    }
     .menu{
         background-color: #f7f7f7;
         display: flex;
@@ -150,6 +162,31 @@ h3, p{
                 width: 100%;
                     &--card{
                         @include menucard;
+                        //green div setup for animation//
+                            &--anim{
+                                display: flex;
+                                align-items: center;
+                                background-color: $third-color;
+                                padding: 10px;
+                                height: 80px;
+                                border-radius: 0px 5px 5px 0px;
+                                transition-duration: 325ms;
+                                transition-timing-function: ease-in-out;
+                                transform-origin: 100% 50%;
+                                transform: scaleX(0);
+                                 & i{
+                                    transition-duration: 400ms;
+                                    transition-timing-function: ease-in;
+                                    transform: scaleY(0);
+                                 }
+                            }
+                        //shrink the text to give space for animation//    
+                        &--name{
+                            width: 80%;
+                            transform-origin: 0% 50%;
+                            transition-duration : 350ms;
+                            transition-timing-function: ease-in-out;
+                        }
                     }
                     &--cta{
                         @include ctafunction;
@@ -206,7 +243,7 @@ h3, p{
         }
         &--card{
             width: 90%;
-            justify-content: space-around;
+
         }
         &--card--name{
             width: 80%;
