@@ -125,7 +125,7 @@ h1 {
     transform: scaleY(2);
   }
   .link:focus .menu--plate--card--name {
-    width: 40%;
+    width: 60%;
   }
   .menu {
     background-color: #f7f7f7;
@@ -264,6 +264,15 @@ h1 {
     flex-shrink: 0;
     min-width: 100%;
     min-height: 100%;
+  }
+  .link:focus .menu--plate--card--anim {
+    transform: scaleX(2);
+  }
+  .link:focus .menu--plate--card--anim i {
+    transform: scaleY(2);
+  }
+  .link:focus .menu--plate--card--name {
+    width: 30%;
   }
   .menu {
     width: 85%;

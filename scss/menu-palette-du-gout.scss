@@ -59,7 +59,7 @@ h1{
                 }
         }
         & .menu--plate--card--name{
-            width: 40%;
+            width: 60%;
         }
     }
     .menu{
@@ -132,6 +132,7 @@ h1{
 //Media querry for tablet first version. Allows screens width from 767px to 1024px//
 @media screen and (min-width: 767px){
 
+
     .menu--list{
         width: 75%;
     }
@@ -180,6 +181,18 @@ h1{
                 min-width: 100%;
                 min-height: 100%
             }
+    }
+
+    .link:focus{
+        & .menu--plate--card--anim{
+            transform: scaleX(2);
+                & i{
+                    transform: scaleY(2);
+                }
+        }
+        & .menu--plate--card--name{
+            width: 30%;
+        }
     }
 
     .menu{
