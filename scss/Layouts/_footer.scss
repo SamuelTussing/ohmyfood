@@ -1,0 +1,45 @@
+@media screen and (min-width: 320px){
+
+    footer{
+        background-color: $dark-background;
+        color: white;
+        padding : 25px;
+            & ul{
+                list-style-type: none;
+                padding-inline-start: 0;
+            }
+            & li{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+                line-height: 30px;
+            }
+            & a{
+                text-decoration: none;
+                color: white;
+                transition: color 300ms 150ms;
+                    &:hover{
+                        color: $first-color-light;
+                    }
+            }
+            & img{
+                filter: invert(100%);
+                height: 27px;
+            }
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 20px;
+            & ul{
+                display: flex;
+                gap: 20px;
+            }
+    }
+}

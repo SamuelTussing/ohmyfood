@@ -1,11 +1,12 @@
-h1 {
-  font-family: "Shrikhand", sans-serif;
-  font-weight: 400;
-  font-size: 28px;
+body, h1, h2 {
+  font-family: "Roboto", sans-serif;
+  max-width: 1440px;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
 }
 
 h2 {
@@ -19,7 +20,6 @@ h2 {
 
 a {
   text-decoration: none;
-  color: white;
 }
 
 h3, p {
@@ -32,8 +32,66 @@ h3, p {
 }
 
 @media screen and (min-width: 320px) {
+  footer {
+    background-color: #353535;
+    color: white;
+    padding: 25px;
+  }
+  footer ul {
+    list-style-type: none;
+    -webkit-padding-start: 0;
+            padding-inline-start: 0;
+  }
+  footer li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    line-height: 30px;
+  }
+  footer a {
+    text-decoration: none;
+    color: white;
+    transition: color 300ms 150ms;
+  }
+  footer a:hover {
+    color: #a872e3;
+  }
+  footer img {
+    filter: invert(100%);
+    height: 27px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+  footer ul {
+    display: flex;
+    gap: 20px;
+  }
+}
+h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+}
+
+@media screen and (min-width: 320px) {
   body {
-    margin: 0px;
+    margin: auto;
+    animation: fadeIn 3s;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   header {
     margin-top: 5px;
@@ -60,16 +118,31 @@ h3, p {
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .link:focus .menu--plate--card--anim {
+    transform: scaleX(2);
+  }
+  .link:focus .menu--plate--card--anim i {
+    transform: scaleY(2);
+  }
+  .link:focus .menu--plate--card--name {
+    width: 60%;
+  }
   .menu {
     background-color: #f7f7f7;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    border-radius: 70px 68px 0px 0px;
+    border-radius: 70px 70px 0px 0px;
     margin-top: -70px;
     z-index: 1;
     position: relative;
+  }
+  .menu--list {
+    width: 100%;
+  }
+  .menu a {
+    color: black;
   }
   .menu--title {
     display: flex;
@@ -90,9 +163,9 @@ h3, p {
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
-    border-radius: 15px;
+    border-radius: 21px;
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-    padding: 0px 15px 0px 15px;
+    padding: 0px 0px 0px 15px;
     margin-top: 20px;
   }
   .menu--plate--card--name {
@@ -102,6 +175,29 @@ h3, p {
   .menu--plate--card--price {
     font-weight: 700;
     font-size: 15px;
+  }
+  .menu--plate--card--anim {
+    display: flex;
+    align-items: center;
+    background-color: #99e2d0;
+    height: 80px;
+    padding: 10px;
+    border-radius: 0px 8px 8px 0px;
+    transition-duration: 325ms;
+    transition-timing-function: ease-in-out;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+  }
+  .menu--plate--card--anim i {
+    transition-duration: 400ms;
+    transition-timing-function: ease-in;
+    transform: scaleY(0);
+  }
+  .menu--plate--card--name {
+    width: 80%;
+    transform-origin: 0% 50%;
+    transition-duration: 350ms;
+    transition-timing-function: ease-in-out;
   }
   .menu--plate--cta {
     display: flex;
@@ -113,34 +209,23 @@ h3, p {
     width: 218px;
     background: linear-gradient(-180deg, #9356DC -11.44%, #FF79DA 123.93%);
     font-size: 16px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    margin: 50px 0px 40px 0px;
-  }
-  footer {
-    background-color: #353535;
     color: white;
-    padding: 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    margin-top: 70px;
+    margin-bottom: 80px;
+    transition: transform 450ms, background 300ms 150ms;
   }
-  footer ul {
-    list-style-type: none;
-    -webkit-padding-start: 0;
-            padding-inline-start: 0;
+  .menu--plate--cta:hover {
+    background: linear-gradient(-180deg, #a872e3 -11.44%, #ff92e0 123.93%);
+    transform: scale(1.02);
   }
-  footer li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    line-height: 30px;
-  }
-  footer img {
-    filter: invert(100%);
-    height: 27px;
+  .menu--plate--cta a {
+    color: white;
   }
 }
 @media screen and (min-width: 767px) {
-  .menu--plate {
-    padding-left: 15%;
+  .menu--list {
+    width: 75%;
   }
   .menu--plate--sel {
     display: flex;
@@ -149,11 +234,10 @@ h3, p {
     flex-direction: column;
   }
   .menu--plate--card {
-    width: 80%;
-    justify-content: space-around;
+    width: 90%;
   }
   .menu--plate--card--name {
-    width: 80%;
+    width: 60%;
     max-height: 100%;
     line-height: 20px;
     display: flex;
@@ -167,7 +251,7 @@ h3, p {
   body {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
   .top--image {
     display: flex;
@@ -181,29 +265,35 @@ h3, p {
     min-width: 100%;
     min-height: 100%;
   }
+  .link:focus .menu--plate--card--anim {
+    transform: scaleX(2);
+  }
+  .link:focus .menu--plate--card--anim i {
+    transform: scaleY(2);
+  }
+  .link:focus .menu--plate--card--name {
+    width: 30%;
+  }
   .menu {
     width: 85%;
+    margin-left: 6%;
+  }
+  .menu--list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
   }
   .menu--plate {
     padding-left: 0;
+    width: 30%;
   }
   .menu--plate--sel {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
   }
-  .menu--plate--card {
-    max-width: 30%;
-  }
-  footer {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: 20px;
-    width: 95%;
-  }
-  footer ul {
-    display: flex;
-    gap: 20px;
+  .menu--plate a {
+    width: 100%;
   }
 }/*# sourceMappingURL=menu-palette-du-gout.css.map */
