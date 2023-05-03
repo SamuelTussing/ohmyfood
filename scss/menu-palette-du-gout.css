@@ -1,11 +1,12 @@
-h1 {
-  font-family: "Shrikhand", sans-serif;
-  font-weight: 400;
-  font-size: 28px;
+body, h1, h2 {
+  font-family: "Roboto", sans-serif;
+  max-width: 1440px;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
 }
 
 h2 {
@@ -31,8 +32,66 @@ h3, p {
 }
 
 @media screen and (min-width: 320px) {
+  footer {
+    background-color: #353535;
+    color: white;
+    padding: 25px;
+  }
+  footer ul {
+    list-style-type: none;
+    -webkit-padding-start: 0;
+            padding-inline-start: 0;
+  }
+  footer li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    line-height: 30px;
+  }
+  footer a {
+    text-decoration: none;
+    color: white;
+    transition: color 300ms 150ms;
+  }
+  footer a:hover {
+    color: #a872e3;
+  }
+  footer img {
+    filter: invert(100%);
+    height: 27px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+  footer ul {
+    display: flex;
+    gap: 20px;
+  }
+}
+h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+}
+
+@media screen and (min-width: 320px) {
   body {
-    margin: 0px;
+    margin: auto;
+    animation: fadeIn 3s;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   header {
     margin-top: 5px;
@@ -66,7 +125,7 @@ h3, p {
     transform: scaleY(2);
   }
   .link:focus .menu--plate--card--name {
-    width: 45%;
+    width: 40%;
   }
   .menu {
     background-color: #f7f7f7;
@@ -74,7 +133,7 @@ h3, p {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    border-radius: 70px 68px 0px 0px;
+    border-radius: 70px 70px 0px 0px;
     margin-top: -70px;
     z-index: 1;
     position: relative;
@@ -104,7 +163,7 @@ h3, p {
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
-    border-radius: 15px;
+    border-radius: 21px;
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
     padding: 0px 0px 0px 15px;
     margin-top: 20px;
@@ -121,9 +180,9 @@ h3, p {
     display: flex;
     align-items: center;
     background-color: #99e2d0;
-    padding: 10px;
     height: 80px;
-    border-radius: 0px 5px 5px 0px;
+    padding: 10px;
+    border-radius: 0px 8px 8px 0px;
     transition-duration: 325ms;
     transition-timing-function: ease-in-out;
     transform-origin: 100% 50%;
@@ -163,35 +222,6 @@ h3, p {
   .menu--plate--cta a {
     color: white;
   }
-  footer {
-    background-color: #353535;
-    color: white;
-    padding: 25px;
-  }
-  footer ul {
-    list-style-type: none;
-    -webkit-padding-start: 0;
-            padding-inline-start: 0;
-  }
-  footer li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    line-height: 30px;
-  }
-  footer img {
-    filter: invert(100%);
-    height: 27px;
-  }
-  footer a {
-    text-decoration: none;
-    color: white;
-    transition: color 300ms 150ms;
-  }
-  footer a:hover {
-    color: #a872e3;
-  }
 }
 @media screen and (min-width: 767px) {
   .menu--list {
@@ -207,7 +237,7 @@ h3, p {
     width: 90%;
   }
   .menu--plate--card--name {
-    width: 80%;
+    width: 60%;
     max-height: 100%;
     line-height: 20px;
     display: flex;
@@ -221,7 +251,7 @@ h3, p {
   body {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
   .top--image {
     display: flex;
@@ -237,6 +267,7 @@ h3, p {
   }
   .menu {
     width: 85%;
+    margin-left: 6%;
   }
   .menu--list {
     display: flex;
@@ -255,25 +286,5 @@ h3, p {
   }
   .menu--plate a {
     width: 100%;
-  }
-  footer {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: 20px;
-    width: 93%;
-    padding: 35px;
-  }
-  footer ul {
-    display: flex;
-    gap: 20px;
-  }
-  footer a {
-    text-decoration: none;
-    color: white;
-    transition: color 300ms 150ms;
-  }
-  footer a:hover {
-    color: #a872e3;
   }
 }/*# sourceMappingURL=menu-palette-du-gout.css.map */

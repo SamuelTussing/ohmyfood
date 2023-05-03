@@ -1,100 +1,30 @@
-//variAbles//
-$first-color:#9356DC;
-$first-color-light: #a872e3;
-$second-color:#FF79DA;
-$second-color-light: #ff92e0;
-$third-color:#99e2d0;
-$light-background:#f3f3f3;
-$med-background:#eaeaea;
-$dark-background:#353535;
-$btn-background: #f6f6f6;
-
-////MIXINS////
-
-//This mixin define the card for the starter,plate and dessert suggestion//
-@mixin menucard {
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-    border-radius: 15px;
-    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-    padding: 0px 0px 0px 15px;
-    margin-top: 20px;
-        &--name{
-            line-height: 15px;
-            padding: 10px;
-        }
-        &--price{
-            font-weight: 700;
-            font-size: 15px;
-        }
-}
-
-//Define the style for the cta "commander"//
-@mixin ctafunction{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor:pointer;
-    border-radius: 25px;
-    height: 50px;
-    width: 218px;
-    background: linear-gradient(-180deg, $first-color -11.44%, $second-color 123.93%);
-    font-size: 16px;
-    color: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    margin-top: 70px;
-    margin-bottom: 80px;
-    transition: transform 450ms, background 300ms 150ms;
-        &:hover{
-            background: linear-gradient(-180deg, $first-color-light -11.44%, $second-color-light 123.93%);
-            transform: scale(1.02);
-        }
-}
+@import "./Utils/variables";
+@import "./Utils/mixins";
+@import "./Base/baserules";
+@import "./Layouts/footer";
 
 
-
+//h1 style is different on menu pages than on mainpage//
 h1{
     font-family: 'Shrikhand', sans-serif;
     font-weight: 400;
     font-size: 28px;
 }
 
-body{
-    font-family: 'Roboto', sans-serif;
-}
-
-h2{
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 19px;
-    border-bottom: 3px solid $third-color ;
-    width: 40px;
-    line-height: 30px;
-}
-
-a{
-    text-decoration: none;
-}
-
-h3, p{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    line-height: 25px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
-
 //Media querry for mobile first version. Allows screens width from 320px to 767px//
 @media screen and (min-width: 320px){
 
     body{
-        margin: 0px;
+        margin: auto;
+        animation: fadeIn 3s;
     }
     
+    //A DEVELOPPER ET A AMELIORER POUR COMPATIBILITE BROWSER//
+    @keyframes fadeIn {
+        0%{opacity: 0;}
+        100%{opacity: 1;}
+    }
+
     header{
     margin-top: 5px;
     height: 63px;
@@ -129,7 +59,7 @@ h3, p{
                 }
         }
         & .menu--plate--card--name{
-            width: 45%;
+            width: 40%;
         }
     }
     .menu{
@@ -138,7 +68,7 @@ h3, p{
         flex-direction: column;
         align-items: center;
         padding: 20px;
-        border-radius: 70px 68px 0px 0px;
+        border-radius: 70px 70px 0px 0px;
         margin-top: -70px;
         z-index: 1;
         position: relative;
@@ -167,9 +97,9 @@ h3, p{
                                 display: flex;
                                 align-items: center;
                                 background-color: $third-color;
-                                padding: 10px;
                                 height: 80px;
-                                border-radius: 0px 5px 5px 0px;
+                                padding: 10px;
+                                border-radius: 0px 8px 8px 0px;
                                 transition-duration: 325ms;
                                 transition-timing-function: ease-in-out;
                                 transform-origin: 100% 50%;
@@ -189,7 +119,7 @@ h3, p{
                         }
                     }
                     &--cta{
-                        @include ctafunction;
+                        @include ctacolored;
                         & a{
                             color: white;
                         }
@@ -197,35 +127,6 @@ h3, p{
             }
     }
 
-
-    footer{
-        background-color: $dark-background;
-        color: white;
-        padding : 25px;
-            & ul{
-                list-style-type: none;
-                padding-inline-start: 0;
-            }
-            & li{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 10px;
-                line-height: 30px;
-            }
-            & img{
-                filter: invert(100%);
-                height: 27px;
-            }
-            & a{
-                text-decoration: none;
-                color: white;
-                transition: color 300ms 150ms;
-                    &:hover{
-                        color: $first-color-light;
-                    }
-            }
-    }
 }
 
 //Media querry for tablet first version. Allows screens width from 767px to 1024px//
@@ -246,7 +147,7 @@ h3, p{
 
         }
         &--card--name{
-            width: 80%;
+            width: 60%;
             max-height: 100%;
             line-height: 20px;
             display: flex;
@@ -265,7 +166,7 @@ h3, p{
     body{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
     }
 
     .top--image{
@@ -283,6 +184,7 @@ h3, p{
 
     .menu{
         width: 85%;
+        margin-left: 6%;
             &--list{
                 display: flex;
                 flex-direction: row;
@@ -300,27 +202,6 @@ h3, p{
             & a{
                 width: 100%;
             }
-            }
-    }
-
-    footer{
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        gap: 20px;
-        width: 93%;
-        padding: 35px;
-            & ul{
-                display: flex;
-                gap: 20px;
-            }
-            & a{
-                text-decoration: none;
-                color: white;
-                transition: color 300ms 150ms;
-                    &:hover{
-                        color: $first-color-light;
-                    }
             }
     }
 }
