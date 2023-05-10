@@ -50,6 +50,15 @@ h1{
         }
     }
 
+.anim{
+    position: absolute;
+    cursor: pointer;
+    right: 63px;
+        &__heart{
+            @include heartanim;
+        }
+}
+
     //animations for selecting the plates : scale the green div in X and the img in Y//
     .link:focus{
         & .menu--plate--card--anim{

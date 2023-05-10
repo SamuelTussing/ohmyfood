@@ -157,34 +157,7 @@ justify-content: center;
                 right: 63px;
                 top:358px;
                     &__heart{
-                        position: relative;
-                        cursor: pointer;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        margin-right: 16px;
-                        margin-bottom: 20px;
-                            &--empty{
-                                position: absolute;
-                                color: black;
-                            }
-                            &--full{
-                                position: absolute;
-                                opacity: 0;
-                                background: linear-gradient(#FF79DA, #9356DC) no-repeat;
-                                -webkit-background-clip: text;
-                                background-clip: text;
-                                color: transparent;
-                                transition: all 400ms;
-                            }
-                            &:focus &--full{
-                                opacity: 1;
-                                animation: pulse 500ms 1;
-                        
-                            }
-                            &:focus &--empty{
-                                opacity: 0;
-                            }
+                        @include heartanim;
                     }
                 }
             }
@@ -194,14 +167,7 @@ justify-content: center;
 }
 
 //this keyframe gives the pulse effect to the heart when animated//
-@keyframes pulse {
-    0%{
-        transform: scale(.5);
-    }
-    75%{
-        transform: scale(1.2);
-    }
-}
+
 
 
 
