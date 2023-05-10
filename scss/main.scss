@@ -168,6 +168,7 @@ justify-content: center;
                                 opacity: 0;
                                 background: linear-gradient(#FF79DA, #9356DC) no-repeat;
                                 -webkit-background-clip: text;
+                                background-clip: text;
                                 color: transparent;
                                 transition: all 400ms;
                             }
@@ -220,14 +221,20 @@ justify-content: center;
         }
     }
 
-    .restos--choices{
+    .restos__choices{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
-            & a{
+        gap: 30px;
+            &__card{
                 width: 45%;
+                    &__anim{
+                        top: 359px;
+                    }
+            }
+            & a{
+                width: 100%;
             }
     }
 }

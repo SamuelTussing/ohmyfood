@@ -260,6 +260,7 @@ h3, p {
     opacity: 0;
     background: linear-gradient(#FF79DA, #9356DC) no-repeat;
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     transition: all 400ms;
   }
@@ -289,14 +290,20 @@ h3, p {
   .function--desc--cta {
     max-width: 30%;
   }
-  .restos--choices {
+  .restos__choices {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
   }
-  .restos--choices a {
+  .restos__choices__card {
     width: 45%;
+  }
+  .restos__choices__card__anim {
+    top: 359px;
+  }
+  .restos__choices a {
+    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */
