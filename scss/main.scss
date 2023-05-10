@@ -123,18 +123,20 @@ justify-content: center;
                     width: 100%;
                     &__visu{
                         display: flex;
-                        flex-direction: row;
+                        flex-direction: column;
                         height: 70%;
+                        width: 100%;
                             &__img{
                                 width: 100%;
                                 object-fit: cover;
                                 border-radius: 15px 15px 0px 0px;
+                                height: 280px;
                             }
                             // "__com" defines the "nouveau" pin in the card//
                             &__com{
-                                position: relative;
-                                top: 16px;
-                                right: 95px;
+                                position: absolute;
+                                top: 56px;
+                                right: 30px;
                                 background-color: #99e2d0;
                                 color: #1b6150;
                                 height: 20px;;
@@ -149,6 +151,7 @@ justify-content: center;
                 background-color: #f6f6f6;
                 border-radius: 0px 0px 15px 15px;
                 width: -webkit-fill-available;
+                width: -moz-available;
             }
             //heart animation setup//
             &__anim{
