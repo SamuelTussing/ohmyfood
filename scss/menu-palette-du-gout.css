@@ -1,3 +1,11 @@
+@keyframes pulse {
+  0% {
+    transform: scale(0.5);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+}
 body, h1, h2 {
   font-family: "Roboto", sans-serif;
   max-width: 1440px;
@@ -29,6 +37,12 @@ h3, p {
   line-height: 25px;
   margin-bottom: 5px;
   margin-top: 5px;
+}
+
+.mainh2 {
+  font-weight: 700;
+  font-size: 24px;
+  border-bottom: 0;
 }
 
 @media screen and (min-width: 320px) {
@@ -118,6 +132,40 @@ h1 {
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .anim {
+    position: absolute;
+    cursor: pointer;
+    right: 63px;
+  }
+  .anim__heart {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    margin-bottom: 20px;
+  }
+  .anim__heart--empty {
+    position: absolute;
+    color: black;
+  }
+  .anim__heart--full {
+    position: absolute;
+    opacity: 0;
+    background: linear-gradient(#FF79DA, #9356DC) no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 400ms;
+  }
+  .anim__heart:focus .anim__heart--full {
+    opacity: 1;
+    animation: pulse 500ms 1;
+  }
+  .anim__heart:focus .anim__heart--empty {
+    opacity: 0;
+  }
   .link:focus .menu--plate--card--anim {
     transform: scaleX(2);
   }
@@ -175,6 +223,9 @@ h1 {
   .menu--plate--card--price {
     font-weight: 700;
     font-size: 15px;
+  }
+  .menu--plate--card--price {
+    padding-bottom: 10px;
   }
   .menu--plate--card--anim {
     display: flex;
@@ -237,7 +288,7 @@ h1 {
     width: 90%;
   }
   .menu--plate--card--name {
-    width: 60%;
+    width: 70%;
     max-height: 100%;
     line-height: 20px;
     display: flex;
@@ -283,6 +334,7 @@ h1 {
     flex-direction: row;
     width: 100%;
     gap: 20px;
+    justify-content: center;
   }
   .menu--plate {
     padding-left: 0;

@@ -50,6 +50,15 @@ h1{
         }
     }
 
+.anim{
+    position: absolute;
+    cursor: pointer;
+    right: 63px;
+        &__heart{
+            @include heartanim;
+        }
+}
+
     //animations for selecting the plates : scale the green div in X and the img in Y//
     .link:focus{
         & .menu--plate--card--anim{
@@ -92,6 +101,9 @@ h1{
                 width: 100%;
                     &--card{
                         @include menucard;
+                        &--price{
+                            padding-bottom: 10px;
+                         }
                         //green div setup for animation//
                             &--anim{
                                 display: flex;
@@ -148,7 +160,7 @@ h1{
 
         }
         &--card--name{
-            width: 60%;
+            width: 70%;
             max-height: 100%;
             line-height: 20px;
             display: flex;
@@ -203,6 +215,7 @@ h1{
                 flex-direction: row;
                 width: 100%;
                 gap: 20px;
+                justify-content: center;
             }
             &--plate{
                 padding-left: 0;
