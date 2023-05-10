@@ -90,14 +90,14 @@ h3, p {
     display: flex;
     justify-content: center;
   }
-  .header--img {
+  .header__img {
     width: 162px;
   }
   .explore {
     color: #353535;
     background-color: #f3f3f3;
   }
-  .explore--location {
+  .explore__location {
     background-color: #eaeaea;
     display: flex;
     flex-direction: row;
@@ -105,14 +105,14 @@ h3, p {
     align-items: center;
     gap: 15px;
   }
-  .explore--infos {
+  .explore__infos {
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 40px;
     align-items: center;
   }
-  .explore--infos--cta {
+  .explore__infos__cta {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,11 +128,11 @@ h3, p {
     margin-bottom: 80px;
     transition: transform 450ms, background 300ms 150ms;
   }
-  .explore--infos--cta:hover {
+  .explore__infos__cta:hover {
     background: linear-gradient(-180deg, #a872e3 -11.44%, #ff92e0 123.93%);
     transform: scale(1.02);
   }
-  .explore--infos--cta a {
+  .explore__infos__cta a {
     text-decoration: none;
     color: white;
   }
@@ -143,14 +143,14 @@ h3, p {
     padding-right: 15px;
     margin-bottom: 75px;
   }
-  .function--desc {
+  .function__desc {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     gap: 20px;
   }
-  .function--desc--cta {
+  .function__desc__cta {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -162,14 +162,14 @@ h3, p {
     background-color: #f6f6f6;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   }
-  .function--desc--cta--txt {
+  .function__desc__cta__txt {
     display: flex;
     flex-direction: row;
     gap: 25px;
     margin-left: 15px;
     align-items: center;
   }
-  .function--desc--cta span {
+  .function__desc__cta span {
     width: 24px;
     height: 24px;
     border-radius: 13px;
@@ -180,10 +180,10 @@ h3, p {
     position: relative;
     left: -15px;
   }
-  .function--desc--cta i {
+  .function__desc__cta i {
     color: #7e7e7e;
   }
-  .function--desc--cta p {
+  .function__desc__cta p {
     font-family: "Roboto";
     font-weight: 500;
     font-size: 16px;
@@ -196,7 +196,6 @@ h3, p {
   }
   .restos__choices__card {
     display: flex;
-    margin-top: 33px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.4));
   }
   .restos__choices__card__a {
@@ -266,7 +265,7 @@ h3, p {
   }
   .restos__choices__card__anim__heart:focus .restos__choices__card__anim__heart--full {
     opacity: 1;
-    animation: pulse 1000ms 1;
+    animation: pulse 500ms 1;
   }
   .restos__choices__card__anim__heart:focus .restos__choices__card__anim__heart--empty {
     opacity: 0;
@@ -284,10 +283,10 @@ h3, p {
   body {
     margin: auto;
   }
-  .function--desc {
+  .function__desc {
     flex-direction: row;
   }
-  .function--desc--cta {
+  .function__desc--cta {
     max-width: 30%;
   }
   .restos__choices {

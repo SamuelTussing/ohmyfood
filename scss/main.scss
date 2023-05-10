@@ -17,7 +17,7 @@ height: 63px;
 display: flex;
 justify-content: center;
 }
-    .header--img{
+    .header__img{
     width: 162px;
     }
 
@@ -25,7 +25,7 @@ justify-content: center;
 .explore{
     color : $dark-background;
     background-color: $light-background;
-        &--location{
+        &__location{
             background-color: $med-background;
             display: flex;
             flex-direction: row;
@@ -33,7 +33,7 @@ justify-content: center;
             align-items: center;
             gap:15px;
         }
-        &--infos{
+        &__infos{
             display: flex;
             flex-direction: column;
             text-align: center;
@@ -41,7 +41,7 @@ justify-content: center;
             align-items: center;
         }
         //cta with hover animation//
-        &--infos--cta{
+        &__infos__cta{
             @include ctacolored();
                 & a{
                     text-decoration: none;
@@ -50,27 +50,29 @@ justify-content: center;
         }
 }
 
+//style for the function section.
 .function{
     display: flex;
     flex-direction: column;
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 75px;
-        &--desc{
+        &__desc{
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
             gap: 20px;
         }
-        &--desc--cta{
+        //the cta style is contain in a mixin in mixin.scss//
+        &__desc__cta{
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
             gap: 10px;
             @include ctafunction();
-                &--txt{
+                &__txt{
                     display: flex;
                     flex-direction: row;
                     gap: 25px;
@@ -99,6 +101,7 @@ justify-content: center;
         }
 }
 
+//Define the style for the "restaurants" section and for each card//
 .restos{
     display: flex;
     flex-direction: column;
@@ -108,7 +111,6 @@ justify-content: center;
 
             &__card{ 
                 display:flex;
-                margin-top:33px;
                 filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.4));
                 &__a{
                     text-decoration: none;
@@ -128,6 +130,7 @@ justify-content: center;
                                 object-fit: cover;
                                 border-radius: 15px 15px 0px 0px;
                             }
+                            // "__com" defines the "nouveau" pin in the card//
                             &__com{
                                 position: relative;
                                 top: 16px;
@@ -140,12 +143,14 @@ justify-content: center;
                             }
                     }
                 }
+            // Define the style of the bottom part of the card containing restaurant name and heart anim//
             &__desc{
                 padding: 15px;
                 background-color: #f6f6f6;
                 border-radius: 0px 0px 15px 15px;
                 width: -webkit-fill-available;
             }
+            //heart animation setup//
             &__anim{
                 position: absolute;
                 cursor: pointer;
@@ -174,7 +179,7 @@ justify-content: center;
                             }
                             &:focus &--full{
                                 opacity: 1;
-                                animation: pulse 1000ms 1;
+                                animation: pulse 500ms 1;
                         
                             }
                             &:focus &--empty{
@@ -188,7 +193,7 @@ justify-content: center;
 
 }
 
-
+//this keyframe gives the pulse effect to the heart when animated//
 @keyframes pulse {
     0%{
         transform: scale(.5);
@@ -214,7 +219,7 @@ justify-content: center;
         margin: auto;
     }
 
-    .function--desc{
+    .function__desc{
         flex-direction: row;
         &--cta{
             max-width: 30%;
