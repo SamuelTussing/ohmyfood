@@ -104,60 +104,100 @@ justify-content: center;
     flex-direction: column;
     padding: 50px 20px 50px 20px;
     background-color: $light-background;
-        &--choices{
-            & a{
-                text-decoration: none;
-                color: black;
-            }
+        &__choices{
 
-            &--card{
-                display: flex;
-                flex-direction: column; 
-                margin-top: 33px;
-                height: 400px;
-                filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-                &--img{
+            &__card{ 
+                display:flex;
+                margin-top:33px;
+                filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.4));
+                &__a{
+                    text-decoration: none;
+                    color: black;
                     display: flex;
-                    flex-direction: row;
-                    height: 70%;
-                    & img{
-                        width: 100%;
-                        object-fit: cover;
-                        border-radius: 15px 15px 0px 0px;
-                    }
-                }
-                &--comm{
-                    position: relative;
-                    top: 16px;
-                    right: 88px;
-                    background-color: $third-color;
-                    color: darken($color: $third-color, $amount: 50%);
-                    height: 20px;
-                    padding: 5px;
-                }
-                &--ctn{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-items: center;
-                    padding: 15px;
-                    background-color: $btn-background;
-                    border-radius: 0px 0px 15px 15px;
-                    }
-                    &--txt{
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-top: 33px;
+                    height: 400px;
+                    width: 100%;
+                    &__visu{
                         display: flex;
-                        flex-direction: column;
+                        flex-direction: row;
+                        height: 70%;
+                            &__img{
+                                width: 100%;
+                                object-fit: cover;
+                                border-radius: 15px 15px 0px 0px;
+                            }
+                            &__com{
+                                position: relative;
+                                top: 16px;
+                                right: 95px;
+                                background-color: #99e2d0;
+                                color: #1b6150;
+                                height: 20px;;
+                                padding: 8px;
+                                font-weight: 500;
+                            }
+                    }
+                }
+            &__desc{
+                padding: 15px;
+                background-color: #f6f6f6;
+                border-radius: 0px 0px 15px 15px;
+                width: -webkit-fill-available;
+            }
+            &__anim{
+                position: absolute;
+                cursor: pointer;
+                right: 63px;
+                top:358px;
+                    &__heart{
+                        position: relative;
+                        cursor: pointer;
+                        display: flex;
                         justify-content: center;
-                        box-sizing: border-box;
-                        padding-top: 5px;
-                        & h3, p{
-                            margin: 2px;
-                        }
+                        align-items: center;
+                        margin-right: 16px;
+                        margin-bottom: 20px;
+                            &--empty{
+                                position: absolute;
+                                color: black;
+                            }
+                            &--full{
+                                position: absolute;
+                                opacity: 0;
+                                background: linear-gradient(#FF79DA, #9356DC) no-repeat;
+                                -webkit-background-clip: text;
+                                color: transparent;
+                                transition: all 400ms;
+                            }
+                            &:focus &--full{
+                                opacity: 1;
+                                animation: pulse 1000ms 1;
+                        
+                            }
+                            &:focus &--empty{
+                                opacity: 0;
+                            }
                     }
                 }
             }
+        }
+}
+
+}
+
+
+@keyframes pulse {
+    0%{
+        transform: scale(.5);
+    }
+    75%{
+        transform: scale(1.2);
     }
 }
+
+
 
 
 
@@ -191,4 +231,5 @@ justify-content: center;
             }
     }
 }
+
 //breakpoint  1024px//

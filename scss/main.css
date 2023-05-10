@@ -31,6 +31,12 @@ h3, p {
   margin-top: 5px;
 }
 
+.mainh2 {
+  font-weight: 700;
+  font-size: 24px;
+  border-bottom: 0;
+}
+
 @media screen and (min-width: 320px) {
   footer {
     background-color: #353535;
@@ -188,55 +194,89 @@ h3, p {
     padding: 50px 20px 50px 20px;
     background-color: #f3f3f3;
   }
-  .restos--choices a {
+  .restos__choices__card {
+    display: flex;
+    margin-top: 33px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.4));
+  }
+  .restos__choices__card__a {
     text-decoration: none;
     color: black;
-  }
-  .restos--choices--card {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     margin-top: 33px;
     height: 400px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    width: 100%;
   }
-  .restos--choices--card--img {
+  .restos__choices__card__a__visu {
     display: flex;
     flex-direction: row;
     height: 70%;
   }
-  .restos--choices--card--img img {
+  .restos__choices__card__a__visu__img {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 15px 15px 0px 0px;
   }
-  .restos--choices--card--comm {
+  .restos__choices__card__a__visu__com {
     position: relative;
     top: 16px;
-    right: 88px;
+    right: 95px;
     background-color: #99e2d0;
     color: #1b6150;
     height: 20px;
-    padding: 5px;
+    padding: 8px;
+    font-weight: 500;
   }
-  .restos--choices--card--ctn {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  .restos__choices__card__desc {
     padding: 15px;
     background-color: #f6f6f6;
     border-radius: 0px 0px 15px 15px;
+    width: -webkit-fill-available;
   }
-  .restos--choices--card--txt {
+  .restos__choices__card__anim {
+    position: absolute;
+    cursor: pointer;
+    right: 63px;
+    top: 358px;
+  }
+  .restos__choices__card__anim__heart {
+    position: relative;
+    cursor: pointer;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    box-sizing: border-box;
-    padding-top: 5px;
+    align-items: center;
+    margin-right: 16px;
+    margin-bottom: 20px;
   }
-  .restos--choices--card--txt h3, .restos--choices--card--txt p {
-    margin: 2px;
+  .restos__choices__card__anim__heart--empty {
+    position: absolute;
+    color: black;
+  }
+  .restos__choices__card__anim__heart--full {
+    position: absolute;
+    opacity: 0;
+    background: linear-gradient(#FF79DA, #9356DC) no-repeat;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 400ms;
+  }
+  .restos__choices__card__anim__heart:focus .restos__choices__card__anim__heart--full {
+    opacity: 1;
+    animation: pulse 1000ms 1;
+  }
+  .restos__choices__card__anim__heart:focus .restos__choices__card__anim__heart--empty {
+    opacity: 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.5);
+  }
+  75% {
+    transform: scale(1.2);
   }
 }
 @media screen and (min-width: 1024px) {
