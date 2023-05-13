@@ -3,41 +3,31 @@
 @import "./Base/baserules";
 @import "./Layouts/footer";
 
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 1185px;
+//style for the loader"page"//
+.loaderpage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 304px;
+  opacity: 0;
+  animation: fade 2.5s 150ms ease-out;
+
 }
 
-.cloche{
-    height: 400px;
-    position: relative;
-    top: -286px;
-    transform: rotateZ(360deg);
-    transform-origin: 0% 100%;
-    animation: cloche 3000ms ease-in infinite alternate forwards;
-        & img{
-            height: 100%;
-        }
+
+//keyframe define the fade out effect for the loader//
+@keyframes fade {
+  10%{
+    opacity: 1;
+  }
+  98%{
+    opacity: 1;
+  }
+  100%{opacity: 0;}
 }
 
-@keyframes cloche{
-    0%{
-        transform: rotateZ(360deg);
-    };
-    20%{
-        transform: rotateZ(360deg);
-    }
-    40%{
-        transform: rotateZ(320deg);
-    }
-    100%{
-        transform: rotateZ(320deg);
-    };
-}
-
+//style for the "logo" filling loader//
 .loader{
     font-family: 'Shrikhand', sans-serif;
     font-size: 48px;
@@ -53,6 +43,7 @@ body{
     color: transparent;
 }
 
+//we will have a superposition of 2 "ohmyfood" logo. a colorfull logo goes on top of a white logo creating a fill effect//
 .loader::after {
     content: 'Ohmyfood';
     position: absolute;
@@ -63,30 +54,41 @@ body{
     height: 100%;
     overflow: hidden;
     box-sizing: border-box;
-    animation: animloader 6s linear infinite;
+    animation: animloader 3s 150ms infinite;
   }
 
+//keyframes gives the position modification for logos superposition//
   @keyframes animloader {
     0% {
       height: 100%;
+    }
+    40%{
+      height: 60%;
+    }
+    60%{
+      height: 50%;
+      animation-timing-function: cubic-bezier(.9,0,.1,1);
     }
     100% {
       height: 0%;
     }
   }
 
+  //define the style for the "plate composed of 4 dots and one moving dot//
   .plate {
     width: 20px;
     height: 20px;
     position: relative;
     left: -96px;
-    top: -387px;
+    top: 14px;
     border-radius: 50%;
     color: $first-color;
     background: $first-color;
+    //dots's position is define by box shadow the fourth one is at 0px 0//
     box-shadow: 60px 0, 120px 0, 180px 0;
   }
   
+  //define the moving dot//
   .plate::after {
     content: '';
     position: absolute;
@@ -95,10 +97,11 @@ body{
     width: 20px;
     height: 20px;
     border-radius: 10px;
-    background:#FF3D00;
-    animation: move 3s linear infinite alternate;
+    background: $second-color;
+    animation: move 3s 150ms linear infinite alternate;
   }
   
+  //"left" gives moving dot position and "width" the width of the dot. the width changes during movement//
   @keyframes move {
     0% , 5%{
       left: 0px;

@@ -102,7 +102,7 @@ body {
   top: -286px;
   transform: rotateZ(360deg);
   transform-origin: 0% 100%;
-  animation: cloche 3000ms ease-in infinite alternate forwards;
+  animation: cloche 3000ms 150ms ease-in infinite alternate forwards;
 }
 .cloche img {
   height: 100%;
@@ -147,7 +147,7 @@ body {
   height: 100%;
   overflow: hidden;
   box-sizing: border-box;
-  animation: animloader 6s linear infinite;
+  animation: animloader 6s 150ms linear infinite;
 }
 
 @keyframes animloader {
@@ -179,7 +179,7 @@ body {
   height: 20px;
   border-radius: 10px;
   background: #FF3D00;
-  animation: move 3s linear infinite alternate;
+  animation: move 3s 150ms linear infinite alternate;
 }
 
 @keyframes move {

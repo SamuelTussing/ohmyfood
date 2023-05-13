@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,159 +12,165 @@
     <script src="https://kit.fontawesome.com/e56d8156c1.js" crossorigin="anonymous"></script>
     <title>Ohmyfood</title>
 </head>
+
 <body>
-    <!--Header contains an arrow to go back to main page-->
-    <header>
-        <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
-        <img src="images/logo/ohmyfood@2x.svg" alt="logo Ohmyfood" class="header--img">
-    </header>
-    <!--Contains a single image that illustrate the restaurant-->
-    <div class="top--image">
-        <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo de plat gastronomique">
+    <div class="loaderpage">
+        <span class="loader">Ohmyfood</span>
+        <span class="plate"></span>
     </div>
-    <section class="menu">
-        <div class="menu--title">
-            <h1>La palette du goût</h1>
-            <div class="anim">
-                <a href="#" class="anim__heart">
-                    <i class="fa-regular fa-heart fa-2x anim__heart--empty"></i>
-                    <i class="fa-solid fa-heart fa-2x anim__heart--full"></i>
-                </a>
-            </div>
+    <div class="main">
+        <!--Header contains an arrow to go back to main page-->
+        <header>
+            <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+            <img src="images/logo/ohmyfood@2x.svg" alt="logo Ohmyfood" class="header--img">
+        </header>
+        <!--Contains a single image that illustrate the restaurant-->
+        <div class="top--image">
+            <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo de plat gastronomique">
         </div>
-        <div class="menu--list">
-            <!--Section with the starters selection-->
-            <div class="menu--plate">
-                <h2 class="menu-plate-subtitle">ENTRÉES</h2>
-                <!--Each card contains a starter with description and price-->
-                <div class="menu--plate--sel">
-                    <a href="#" class="link">
-                        <article class="menu--plate--card">
-                            <div class="menu--plate--card--name">
-                                <h3>Fricassée d'escargots</h3>
-                                <p><span>Au piment d'Espelette </span></p>
-                            </div>
-                            <div class="menu--plate--card--price">
-                                <p>25€</p>
-                            </div>
-                            <div class="menu--plate--card--anim">
-                                <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>                              
-                            </div>
-                        </article>
-                    </a>
-                    <a href="#" class="link">
-                        <article class="menu--plate--card">
-                            <div class="menu--plate--card--name">
-                                <h3>Foie gras de canard mi-cuit</h3>
-                                <p><span>Et ses copeaux de truffe noire</span></p>
-                            </div>
-                            <div class="menu--plate--card--price">
-                                <p>35€</p>
-                            </div>
-                            <div class="menu--plate--card--anim">
-                                <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>                              
-                            </div>
-                        </article>
-                    </a>
-                    <a href="#" class="link">
-                        <article class="menu--plate--card">
-                            <div class="menu--plate--card--name">
-                                <h3>Œuf au plat</h3>
-                                <p><span>Assaisonné à la truffe sur lit de caviar</span></p>
-                            </div>
-                            <div class="menu--plate--card--price">
-                                <p>20€</p>
-                            </div>
-                            <div class="menu--plate--card--anim">
-                                <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>                              
-                            </div>
-                        </article>
+        <section class="menu">
+            <div class="menu--title">
+                <h1>La palette du goût</h1>
+                <div class="anim">
+                    <a href="#" class="anim__heart">
+                        <i class="fa-regular fa-heart fa-2x anim__heart--empty"></i>
+                        <i class="fa-solid fa-heart fa-2x anim__heart--full"></i>
                     </a>
                 </div>
             </div>
-            <!--Section with the plates selection. This section has the same construction as the previous section-->
-            <div class="menu--plate">
-                <h2 class="menu-plate-subtitle">PLATS</h2>
-                <!--Each card contains a starter with description and price-->
-                <div class="menu--plate--sel">
-                    <a href="#" class="link">
-                        <article class="menu--plate--card">
-                            <div class="menu--plate--card--name">
-                                <h3>Filet de bœuf aux herbes</h3>
-                                <p><span>Accompagné de sa ribambelle de légumes</span></p>
-                            </div>
-                            <div class="menu--plate--card--price">
-                                <p>40€</p>
-                            </div>
-                            <div class="menu--plate--card--anim">
-                                <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>                              
-                            </div>
-                        </article>
-                    </a>
-                    <a href="#" class="link">
-                        <article class="menu--plate--card">
-                            <div class="menu--plate--card--name">
-                                <h3>Parmentier de queue de bœuf</h3>
-                                <p><span>À la truffe noire sur sa purée de panais</span></p>
-                            </div>
-                            <div class="menu--plate--card--price">
-                                <p>35€</p>
-                            </div>
-                            <div class="menu--plate--card--anim">
-                                <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>                              
-                            </div>
-                        </article>
-                    </a>
-                    <a href="#" class="link">
-                        <article class="menu--plate--card">
-                            <div class="menu--plate--card--name">
-                                <h3>Filet de turbot</h3>
-                                <p><span>Aux agrumes</span></p>
-                            </div>
-                            <div class="menu--plate--card--price">
-                                <p>44€</p>
-                            </div>
-                            <div class="menu--plate--card--anim">
-                                <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>                              
-                            </div>
-                        </article>
-                    </a>
+            <div class="menu--list">
+                <!--Section with the starters selection-->
+                <div class="menu--plate">
+                    <h2 class="menu-plate-subtitle">ENTRÉES</h2>
+                    <!--Each card contains a starter with description and price-->
+                    <div class="menu--plate--sel">
+                        <a href="#" class="link">
+                            <article class="menu--plate--card">
+                                <div class="menu--plate--card--name">
+                                    <h3>Fricassée d'escargots</h3>
+                                    <p><span>Au piment d'Espelette </span></p>
+                                </div>
+                                <div class="menu--plate--card--price">
+                                    <p>25€</p>
+                                </div>
+                                <div class="menu--plate--card--anim">
+                                    <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>
+                                </div>
+                            </article>
+                        </a>
+                        <a href="#" class="link">
+                            <article class="menu--plate--card">
+                                <div class="menu--plate--card--name">
+                                    <h3>Foie gras de canard mi-cuit</h3>
+                                    <p><span>Et ses copeaux de truffe noire</span></p>
+                                </div>
+                                <div class="menu--plate--card--price">
+                                    <p>35€</p>
+                                </div>
+                                <div class="menu--plate--card--anim">
+                                    <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>
+                                </div>
+                            </article>
+                        </a>
+                        <a href="#" class="link">
+                            <article class="menu--plate--card">
+                                <div class="menu--plate--card--name">
+                                    <h3>Œuf au plat</h3>
+                                    <p><span>Assaisonné à la truffe sur lit de caviar</span></p>
+                                </div>
+                                <div class="menu--plate--card--price">
+                                    <p>20€</p>
+                                </div>
+                                <div class="menu--plate--card--anim">
+                                    <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <!-- Section contains the desserts selection-->
-            <div class="menu--plate">
-                <h2 class="menu-plate-subtitle">DESSERTS</h2>
-                <!--Each card contains a starter with description and price-->
-                <div class="menu--plate--sel">
-                    <a href="#" class="link">
-                        <article class="menu--plate--card">
-                            <div class="menu--plate--card--name">
-                                <h3>Paris-Brest</h3>
-                                <p><span>Revisité</span></p>
-                            </div>
-                            <div class="menu--plate--card--price">
-                                <p>18€</p>
-                            </div>
-                            <div class="menu--plate--card--anim">
-                                <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>                              
-                            </div>
-                        </article>
-                    </a>
-                    <a href="#" class="link">
-                        <article class="menu--plate--card">
-                            <div class="menu--plate--card--name">
-                                <h3>Macaron au chocolat d'exception </h3>
-                                <p><span>Et glace à la vanille de Madagascar</span></p>
-                            </div>
+                <!--Section with the plates selection. This section has the same construction as the previous section-->
+                <div class="menu--plate">
+                    <h2 class="menu-plate-subtitle">PLATS</h2>
+                    <!--Each card contains a starter with description and price-->
+                    <div class="menu--plate--sel">
+                        <a href="#" class="link">
+                            <article class="menu--plate--card">
+                                <div class="menu--plate--card--name">
+                                    <h3>Filet de bœuf aux herbes</h3>
+                                    <p><span>Accompagné de sa ribambelle de légumes</span></p>
+                                </div>
+                                <div class="menu--plate--card--price">
+                                    <p>40€</p>
+                                </div>
+                                <div class="menu--plate--card--anim">
+                                    <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>
+                                </div>
+                            </article>
+                        </a>
+                        <a href="#" class="link">
+                            <article class="menu--plate--card">
+                                <div class="menu--plate--card--name">
+                                    <h3>Parmentier de queue de bœuf</h3>
+                                    <p><span>À la truffe noire sur sa purée de panais</span></p>
+                                </div>
+                                <div class="menu--plate--card--price">
+                                    <p>35€</p>
+                                </div>
+                                <div class="menu--plate--card--anim">
+                                    <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>
+                                </div>
+                            </article>
+                        </a>
+                        <a href="#" class="link">
+                            <article class="menu--plate--card">
+                                <div class="menu--plate--card--name">
+                                    <h3>Filet de turbot</h3>
+                                    <p><span>Aux agrumes</span></p>
+                                </div>
+                                <div class="menu--plate--card--price">
+                                    <p>44€</p>
+                                </div>
+                                <div class="menu--plate--card--anim">
+                                    <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+                <!-- Section contains the desserts selection-->
+                <div class="menu--plate">
+                    <h2 class="menu-plate-subtitle">DESSERTS</h2>
+                    <!--Each card contains a starter with description and price-->
+                    <div class="menu--plate--sel">
+                        <a href="#" class="link">
+                            <article class="menu--plate--card">
+                                <div class="menu--plate--card--name">
+                                    <h3>Paris-Brest</h3>
+                                    <p><span>Revisité</span></p>
+                                </div>
+                                <div class="menu--plate--card--price">
+                                    <p>18€</p>
+                                </div>
+                                <div class="menu--plate--card--anim">
+                                    <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>
+                                </div>
+                            </article>
+                        </a>
+                        <a href="#" class="link">
+                            <article class="menu--plate--card">
+                                <div class="menu--plate--card--name">
+                                    <h3>Macaron au chocolat d'exception </h3>
+                                    <p><span>Et glace à la vanille de Madagascar</span></p>
+                                </div>
                                 <div class="menu--plate--card--price">
                                     <p>22€</p>
                                 </div>
                                 <div class="menu--plate--card--anim">
-                                    <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>                              
+                                    <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>
                                 </div>
-                        </article>
-                    </a>
-                    <a href="#" class="link">
+                            </article>
+                        </a>
+                        <a href="#" class="link">
                             <article class="menu--plate--card">
                                 <div class="menu--plate--card--name">
                                     <h3>Mousse au chocolat </h3>
@@ -173,24 +180,25 @@
                                     <p>23€</p>
                                 </div>
                                 <div class="menu--plate--card--anim">
-                                    <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>                              
+                                    <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>
                                 </div>
-                        </article>
-                    </a>
+                            </article>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="menu--plate--cta">
-            <span><a href="#">Commander</a></span>
-        </div>
-    </section>
-    <footer>
-        <img src="images/logo/ohmyfood@2x.svg" alt="logo Ohmyfood" class="footer--img">
-        <ul>
-            <li><i class="fa-solid fa-utensils"></i><a href="#">Proposer un restaurant</a></li>
-            <li><i class="fa-solid fa-handshake-angle"></i><a href="#">Devenir partenaire</a></li>
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="mailto:contact@gmail.com">Contact</a></li>
-        </ul>
-    </footer>
+            <div class="menu--plate--cta">
+                <span><a href="#">Commander</a></span>
+            </div>
+        </section>
+        <footer>
+            <img src="images/logo/ohmyfood@2x.svg" alt="logo Ohmyfood" class="footer--img">
+            <ul>
+                <li><i class="fa-solid fa-utensils"></i><a href="#">Proposer un restaurant</a></li>
+                <li><i class="fa-solid fa-handshake-angle"></i><a href="#">Devenir partenaire</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="mailto:contact@gmail.com">Contact</a></li>
+            </ul>
+        </footer>
+    </div>
 </body>
