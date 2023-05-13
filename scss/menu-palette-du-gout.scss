@@ -2,6 +2,7 @@
 @import "./Utils/mixins";
 @import "./Base/baserules";
 @import "./Layouts/footer";
+@import "./loader";
 
 
 //h1 style is different on menu pages than on mainpage//
@@ -11,10 +12,11 @@ h1{
     font-size: 28px;
 }
 
+
 //Media querry for mobile first version. Allows screens width from 320px to 767px//
 @media screen and (min-width: 320px){
 
-    body{
+    .main{   
         margin: auto;
         animation: fadeIn 3s;
     }
@@ -22,8 +24,15 @@ h1{
     //A DEVELOPPER ET A AMELIORER POUR COMPATIBILITE BROWSER//
     @keyframes fadeIn {
         0%{opacity: 0;}
+        80%{opacity: 0;}
         100%{opacity: 1;}
     }
+
+    body{
+        margin: auto;
+    }
+    
+
 
     header{
     margin-top: 5px;
@@ -32,6 +41,8 @@ h1{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    position: relative;
+    top: -45px;
         & a{
             position: absolute;
             left: 45px;
@@ -39,7 +50,7 @@ h1{
         }
     }
         .header--img{
-        width: 162px;
+        width: 250px;
         }   
     .top--image{
         max-height: 600px;
@@ -176,11 +187,7 @@ h1{
 //Media querry for desktop version. Allows screens width from 1024px to 1440px//
 @media screen and (min-width: 1024px){
 
-    body{
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-    }
+
 
     .top--image{
         display: flex;

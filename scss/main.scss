@@ -2,7 +2,7 @@
 @import "./Utils/mixins";
 @import "./Base/baserules";
 @import "./Layouts/footer";
-
+@import "./loader";
 
 
 @media screen and (min-width: 320px){
@@ -10,15 +10,28 @@
 body{
     margin: 0px;
 }
+.main{   
+        margin: auto;
+        animation: fadeIn 3s;
+    }
+    
+    //A DEVELOPPER ET A AMELIORER POUR COMPATIBILITE BROWSER//
+    @keyframes fadeIn {
+        0%{opacity: 0;}
+        80%{opacity: 0;}
+        100%{opacity: 1;}
+    }
+
 
 header{
 margin-top: 5px;
-height: 63px;
 display: flex;
 justify-content: center;
+position: relative;
+top: -45px;
 }
     .header__img{
-    width: 162px;
+    width: 250px;
     }
 
     //style for the explore section containing h1 txt and cta//
@@ -123,18 +136,20 @@ justify-content: center;
                     width: 100%;
                     &__visu{
                         display: flex;
-                        flex-direction: row;
+                        flex-direction: column;
                         height: 70%;
+                        width: 100%;
                             &__img{
                                 width: 100%;
                                 object-fit: cover;
                                 border-radius: 15px 15px 0px 0px;
+                                height: 280px;
                             }
                             // "__com" defines the "nouveau" pin in the card//
                             &__com{
-                                position: relative;
-                                top: 16px;
-                                right: 95px;
+                                position: absolute;
+                                top: 56px;
+                                right: 30px;
                                 background-color: #99e2d0;
                                 color: #1b6150;
                                 height: 20px;;
@@ -149,6 +164,7 @@ justify-content: center;
                 background-color: #f6f6f6;
                 border-radius: 0px 0px 15px 15px;
                 width: -webkit-fill-available;
+                width: -moz-available;
             }
             //heart animation setup//
             &__anim{
@@ -165,8 +181,6 @@ justify-content: center;
 }
 
 }
-
-//this keyframe gives the pulse effect to the heart when animated//
 
 
 
