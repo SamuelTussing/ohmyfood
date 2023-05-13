@@ -83,7 +83,6 @@ top: -45px;
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
-            gap: 10px;
             @include ctafunction();
                 &__txt{
                     display: flex;
