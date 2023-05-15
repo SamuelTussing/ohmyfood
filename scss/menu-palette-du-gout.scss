@@ -10,6 +10,7 @@ h1{
     font-family: 'Shrikhand', sans-serif;
     font-weight: 400;
     font-size: 28px;
+    width: 60%;
 }
 
 
@@ -50,7 +51,7 @@ h1{
         }
     }
         .header--img{
-        width: 250px;
+        width: 50%;
         }   
     .top--image{
         max-height: 600px;
@@ -79,7 +80,7 @@ h1{
                 }
         }
         & .menu--plate--card--name{
-            width: 60%;
+            width: 40%;
         }
     }
     .menu{
@@ -135,7 +136,7 @@ h1{
                             }
                         //shrink the text to give space for animation//    
                         &--name{
-                            width: 80%;
+                            width: 70%;
                             transform-origin: 0% 50%;
                             transition-duration : 350ms;
                             transition-timing-function: ease-in-out;
@@ -152,9 +153,13 @@ h1{
 
 }
 
+
 //Media querry for tablet first version. Allows screens width from 767px to 1024px//
 @media screen and (min-width: 767px){
 
+    .header--img{
+        width: 250px;
+    }
 
     .menu--list{
         width: 75%;
@@ -181,7 +186,11 @@ h1{
             padding-top: 10px;
         }
     }
-    
+    .link:focus{
+        & .menu--plate--card--name{
+            width: 60%;
+        }
+    }
 }
 
 //Media querry for desktop version. Allows screens width from 1024px to 1440px//

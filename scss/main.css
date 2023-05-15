@@ -1,6 +1,10 @@
 @keyframes pulse {
   0% {
     transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
   }
   75% {
     transform: scale(1.2);
@@ -37,6 +41,10 @@ h3, p {
   line-height: 25px;
   margin-bottom: 5px;
   margin-top: 5px;
+}
+
+.explore__infos__txt {
+  white-space: normal;
 }
 
 .mainh2 {
@@ -91,6 +99,10 @@ h3, p {
 @keyframes pulse {
   0% {
     transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
   }
   75% {
     transform: scale(1.2);
@@ -127,6 +139,10 @@ h3, p {
   line-height: 25px;
   margin-bottom: 5px;
   margin-top: 5px;
+}
+
+.explore__infos__txt {
+  white-space: normal;
 }
 
 .mainh2 {
@@ -178,119 +194,119 @@ h3, p {
     gap: 20px;
   }
 }
-.loaderpage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: sticky;
-  top: 304px;
-  opacity: 0;
-  animation: fade 2.5s 150ms ease-out;
-}
-
-@keyframes fade {
-  10% {
-    opacity: 1;
-  }
-  98% {
-    opacity: 1;
-  }
-  100% {
+@media screen and (min-width: 320px) {
+  .loaderpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 304px;
     opacity: 0;
+    animation: fade 2.5s 150ms ease-out;
   }
-}
-.loader {
-  font-family: "Shrikhand", sans-serif;
-  font-size: 48px;
-  font-weight: 700;
-  display: inline-block;
-  letter-spacing: 2px;
-  position: relative;
-  box-sizing: border-box;
-  background: linear-gradient(#FF79DA, #9356DC) no-repeat;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.loader::after {
-  content: "Ohmyfood";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #d6d6d6;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  box-sizing: border-box;
-  animation: animloader 3s 150ms linear infinite;
-}
-
-@keyframes animloader {
-  0% {
+  @keyframes fade {
+    10% {
+      opacity: 1;
+    }
+    98% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  .loader {
+    font-family: "Shrikhand", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    display: inline-block;
+    letter-spacing: 2px;
+    position: relative;
+    box-sizing: border-box;
+    background: linear-gradient(#FF79DA, #9356DC) no-repeat;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .loader::after {
+    content: "Ohmyfood";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #d6d6d6;
+    width: 100%;
     height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    animation: animloader 3s 150ms infinite;
   }
-  98% {
-    opacity: 1;
+  @keyframes animloader {
+    0% {
+      height: 100%;
+    }
+    40% {
+      height: 60%;
+    }
+    60% {
+      height: 50%;
+      animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
+    }
+    100% {
+      height: 0%;
+    }
   }
-  100% {
-    height: 0%;
-    opacity: 1;
-  }
-}
-.plate {
-  width: 20px;
-  height: 20px;
-  position: relative;
-  left: -96px;
-  top: 14px;
-  border-radius: 50%;
-  color: #9356DC;
-  background: #9356DC;
-  box-shadow: 60px 0, 120px 0, 180px 0;
-}
-
-.plate::after {
-  content: "";
-  position: absolute;
-  left: -96px;
-  top: 0;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  background: #FF79DA;
-  animation: move 3s 150ms linear infinite alternate;
-}
-
-@keyframes move {
-  0%, 5% {
-    left: 0px;
+  .plate {
     width: 20px;
+    height: 20px;
+    position: relative;
+    left: -96px;
+    top: 14px;
+    border-radius: 50%;
+    color: #9356DC;
+    background: #9356DC;
+    box-shadow: 60px 0, 120px 0, 180px 0;
   }
-  15%, 20% {
-    left: 0px;
-    width: 80px;
-  }
-  30%, 35% {
-    left: 60px;
+  .plate::after {
+    content: "";
+    position: absolute;
+    left: -96px;
+    top: 0;
     width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background: #FF79DA;
+    animation: move 3s 150ms linear infinite alternate;
   }
-  45%, 50% {
-    left: 60px;
-    width: 80px;
-  }
-  60%, 65% {
-    left: 120px;
-    width: 20px;
-  }
-  75%, 80% {
-    left: 120px;
-    width: 80px;
-  }
-  95%, 100% {
-    left: 180px;
-    width: 20px;
+  @keyframes move {
+    0%, 5% {
+      left: 0px;
+      width: 20px;
+    }
+    15%, 20% {
+      left: 0px;
+      width: 80px;
+    }
+    30%, 35% {
+      left: 60px;
+      width: 20px;
+    }
+    45%, 50% {
+      left: 60px;
+      width: 80px;
+    }
+    60%, 65% {
+      left: 120px;
+      width: 20px;
+    }
+    75%, 80% {
+      left: 120px;
+      width: 80px;
+    }
+    95%, 100% {
+      left: 180px;
+      width: 20px;
+    }
   }
 }
 @media screen and (min-width: 320px) {
@@ -384,9 +400,8 @@ h3, p {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 10px;
     height: 72px;
-    width: 323px;
+    width: 280px;
     border-radius: 20px;
     background-color: #f6f6f6;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -479,7 +494,7 @@ h3, p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 16px;
+    margin-right: -15px;
     margin-bottom: 20px;
   }
   .restos__choices__card__anim__heart--empty {
