@@ -486,7 +486,7 @@ h3, p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 16px;
+    margin-right: -15px;
     margin-bottom: 20px;
   }
   .restos__choices__card__anim__heart--empty {
