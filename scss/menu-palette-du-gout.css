@@ -1,6 +1,10 @@
 @keyframes pulse {
   0% {
     transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
   }
   75% {
     transform: scale(1.2);
@@ -95,6 +99,10 @@ h3, p {
 @keyframes pulse {
   0% {
     transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
   }
   75% {
     transform: scale(1.2);

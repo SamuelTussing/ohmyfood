@@ -86,6 +86,10 @@
 @keyframes pulse {
     0%{
         transform: scale(.5);
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.2;
     }
     75%{
         transform: scale(1.2);
