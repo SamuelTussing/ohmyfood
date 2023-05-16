@@ -65,17 +65,19 @@
         }
         &--full{
             position: absolute;
-            opacity: 0;
+            opacity: 1;
             background: linear-gradient(#FF79DA, #9356DC) no-repeat;
             -webkit-background-clip: text;
             -moz-background-clip: text;
             background-clip: text;
             color: transparent;
-            transition: all 400ms;
+            animation: unpulse 500ms 1 both;
+            animation-direction: reverse;
+            animation-fill-mode: forwards;
         }
         &:focus &--full{
-            opacity: 1;
-            animation: pulse 500ms 1;
+
+            animation: pulse 500ms 1 both;
                         
         }
         &:focus &--empty{
@@ -93,5 +95,23 @@
     }
     75%{
         transform: scale(1.2);
+    }
+}
+
+@keyframes unpulse {
+    0%{
+        transform: scale(.5);
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.2;
+    }
+    75%{
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
     }
 }

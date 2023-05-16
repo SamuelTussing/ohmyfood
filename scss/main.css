@@ -10,6 +10,23 @@
     transform: scale(1.2);
   }
 }
+@keyframes unpulse {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  75% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 body, h1, h2 {
   font-family: "Roboto", sans-serif;
   max-width: 1440px;
@@ -108,6 +125,23 @@ h3, p {
     transform: scale(1.2);
   }
 }
+@keyframes unpulse {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  75% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 body, h1, h2 {
   font-family: "Roboto", sans-serif;
   max-width: 1440px;
@@ -200,7 +234,7 @@ h3, p {
     flex-direction: column;
     align-items: center;
     position: sticky;
-    top: 304px;
+    top: 450px;
     opacity: 0;
     animation: fade 2.5s 150ms ease-out;
   }
@@ -503,17 +537,18 @@ h3, p {
   }
   .restos__choices__card__anim__heart--full {
     position: absolute;
-    opacity: 0;
+    opacity: 1;
     background: linear-gradient(#FF79DA, #9356DC) no-repeat;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
     color: transparent;
-    transition: all 400ms;
+    animation: unpulse 500ms 1 both;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
   }
   .restos__choices__card__anim__heart:focus .restos__choices__card__anim__heart--full {
-    opacity: 1;
-    animation: pulse 500ms 1;
+    animation: pulse 500ms 1 both;
   }
   .restos__choices__card__anim__heart:focus .restos__choices__card__anim__heart--empty {
     opacity: 0;
