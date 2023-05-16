@@ -43,7 +43,6 @@ h1{
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -45px;
         & a{
             position: absolute;
             left: 45px;
@@ -111,6 +110,13 @@ h1{
                 flex-direction: column;
                 padding-top: 25px;
                 width: 100%;
+                opacity: 0;
+                animation: appear $anim-dur forwards;
+                @for $i from 1 through $num-menu{
+                    &--#{$i}{
+                        animation-delay: $anim-delay * $i;
+                    }
+                }
                     &--card{
                         @include menucard;
                         &--price{
@@ -150,6 +156,13 @@ h1{
                     }
             }
     }
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    100%{opacity: 1;}
+}
 
 }
 

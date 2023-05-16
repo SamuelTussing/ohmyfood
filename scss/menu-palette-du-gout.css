@@ -377,7 +377,6 @@ h1 {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -45px;
   }
   header a {
     position: absolute;
@@ -470,6 +469,17 @@ h1 {
     flex-direction: column;
     padding-top: 25px;
     width: 100%;
+    opacity: 0;
+    animation: appear 1000ms forwards;
+  }
+  .menu--plate--1 {
+    animation-delay: 333.3333333333ms;
+  }
+  .menu--plate--2 {
+    animation-delay: 666.6666666667ms;
+  }
+  .menu--plate--3 {
+    animation-delay: 1000ms;
   }
   .menu--plate--card {
     background-color: white;
@@ -538,6 +548,14 @@ h1 {
   }
   .menu--plate--cta a {
     color: white;
+  }
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
 @media screen and (min-width: 767px) {

@@ -9,3 +9,8 @@ $med-background:#eaeaea;
 $dark-background:#353535;
 $btn-background: #f6f6f6;
 $degrade-color:linear-gradient(#FF79DA, #9356DC);
+
+//variable for menu apparition//
+$anim-dur:1000ms;
+$num-menu:3;
+$anim-delay: $anim-dur / $num-menu;
