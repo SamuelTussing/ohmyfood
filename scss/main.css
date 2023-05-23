@@ -434,11 +434,15 @@ h3, p {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    cursor: pointer;
     height: 72px;
     width: 280px;
     border-radius: 20px;
     background-color: #f6f6f6;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  }
+  .function__desc__cta:hover i {
+    color: #9356DC;
   }
   .function__desc__cta__txt {
     display: flex;
@@ -547,10 +551,10 @@ h3, p {
     animation-direction: reverse;
     animation-fill-mode: forwards;
   }
-  .restos__choices__card__anim__heart:focus .restos__choices__card__anim__heart--full {
+  .restos__choices__card__anim__heart:hover .restos__choices__card__anim__heart--full {
     animation: pulse 500ms 1 both;
   }
-  .restos__choices__card__anim__heart:focus .restos__choices__card__anim__heart--empty {
+  .restos__choices__card__anim__heart:hover .restos__choices__card__anim__heart--empty {
     opacity: 0;
   }
 }

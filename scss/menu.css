@@ -397,7 +397,6 @@ h1 {
   }
   .anim {
     position: absolute;
-    cursor: pointer;
     right: 63px;
   }
   .anim__heart {
@@ -425,20 +424,20 @@ h1 {
     animation-direction: reverse;
     animation-fill-mode: forwards;
   }
-  .anim__heart:focus .anim__heart--full {
+  .anim__heart:hover .anim__heart--full {
     animation: pulse 500ms 1 both;
   }
-  .anim__heart:focus .anim__heart--empty {
+  .anim__heart:hover .anim__heart--empty {
     opacity: 0;
   }
-  .link:focus .menu--plate--card--anim {
+  .link:hover .menu--plate--card--anim {
     transform: scaleX(2);
   }
-  .link:focus .menu--plate--card--anim i {
+  .link:hover .menu--plate--card--anim i {
     transform: scaleY(2);
   }
-  .link:focus .menu--plate--card--name {
-    width: 40%;
+  .link:hover .menu--plate--card--name {
+    width: 60%;
   }
   .menu {
     background-color: #f7f7f7;
@@ -616,14 +615,15 @@ h1 {
   }
   .menu--list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     gap: 20px;
     justify-content: center;
+    align-items: center;
   }
   .menu--plate {
     padding-left: 0;
-    width: 30%;
+    width: 60%;
   }
   .menu--plate--sel {
     display: flex;
