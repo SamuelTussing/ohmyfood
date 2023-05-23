@@ -437,7 +437,7 @@ h1 {
     transform: scaleY(2);
   }
   .link:hover .menu--plate--card--name {
-    width: 60%;
+    width: 35%;
   }
   .menu {
     background-color: #f7f7f7;
@@ -607,7 +607,7 @@ h1 {
     transform: scaleY(2);
   }
   .link:focus .menu--plate--card--name {
-    width: 30%;
+    width: 65%;
   }
   .menu {
     width: 85%;
