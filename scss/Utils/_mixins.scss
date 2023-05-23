@@ -75,12 +75,12 @@
             animation-direction: reverse;
             animation-fill-mode: forwards;
         }
-        &:focus &--full{
+        &:hover &--full{
 
             animation: pulse 500ms 1 both;
                         
         }
-        &:focus &--empty{
+        &:hover &--empty{
             opacity: 0;
         }
 }
